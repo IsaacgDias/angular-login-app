@@ -1,14 +1,19 @@
 <main>
-    <section>
-        <img src="/assets/img/icone-login.png"/>
-        <h2></h2>
-        <button></button>
-        <div>
-            <span>ou</span>
+    <section class="form-section">
+        <img class="img-icone" src="/assets/img/icone-login.png"/>
+        <h2>{{ title }}</h2>
+        <ng-content></ng-content>
+        <div class="btns">
+            <button class="btn1">{{ btn1}}</button>
+            <div class="dividir">
+                <div></div>
+                <span>OU</span>
+                <div></div>
+            </div>
+            <button class="btn2">{{ btn2 }}</button>
         </div>
-        <button></button>
     </section>
-    <section>
+    <section class="main-section">
         <h2>App Login</h2>
         <img src="/assets/img/imagem_senha.jpg"/>
     </section>
