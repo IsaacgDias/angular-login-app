@@ -4,13 +4,13 @@
         <h2>{{ title }}</h2>
         <ng-content></ng-content>
         <div class="btns">
-            <button class="btn1">{{ btn1}}</button>
+            <button class="btn1" (click)="submit()">{{ btn1}}</button>
             <div class="dividir">
                 <div></div>
                 <span>OU</span>
                 <div></div>
             </div>
-            <button class="btn2">{{ btn2 }}</button>
+            <button class="btn2" (click)="cadastro">{{ btn2 }}</button>
         </div>
     </section>
     <section class="main-section">

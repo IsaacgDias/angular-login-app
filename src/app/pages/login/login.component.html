@@ -2,9 +2,18 @@
     title="Faça login em sua conta"
     btn1="Conecte-se"
     btn2="Inscreva-se agora"
+    (submit)="submit()"
+    (cadastro)="cadastro()"
 >
-    <form> 
-        
+    <form [formGroup]="loginForm"> 
+        <app-input-form formControlName="email" inputName="email" type="email" label="Email" placeholder="exemplo@gmail.com">
+            
+        </app-input-form>
+
+        <app-input-form formControlName="password" inputName="password" type="password" label="Sua Senha">
+            
+        </app-input-form>
+        <span>Esqueceu a senha?</span>
     </form>
 
 </app-login-layout>

@@ -1,22 +1,31 @@
-import { Component } from '@angular/core';
-import { LoginLayoutComponent } from '../../components/login-layout/login-layout.component';
+import { Component} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
- 
 })
 export class LoginComponent {
-  loginForm!: FormGroup;
+  loginForm: FormGroup;
 
-  constructor() {
-  this.loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)])
-  })  
+  constructor(
+    private router: Router
+  ) {
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    });
+  }
+  
+  submit() {
+    console.log(this.loginForm.value)
+  }
 
-    
+  cadastro() {
+    this.router.navigate(["/cadastro"])
   }
 }
+
+
